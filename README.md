@@ -1,12 +1,7 @@
-# ADVENTURE WORKS website
-### A mock ecommerce website based on the Microsoft 'Adventure Works' database. Created with VueJS
+# Vue 3 + Vite
 
-This is the frontend for a mock E-Commerce site, which uses the Adventure Works database, a mock SQL database created by Microsoft. Adventure Works is a mock bicycle company. 
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-The backend is located here: [Adventure-Works-Backend](https://github.com/hikemalliday/Adventure-Works-Backend)
+## Recommended IDE Setup
 
-The app allows a user to create a username and password, which is then excrypted and saved into a SQLite database. Upon login, a JWT is issued, and stored in localStorage. The token expires after 30 minutes, and boots the user to login, and the locally stored token is erased. Token is also erased when the user manually logs out. 
-
-The user can query for items in the Adventure works database by searchbar, and filter by categories. Items can be added to a shopping cart. This shopping cart is stored in local storage, and is unique for each user.
-
-
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).

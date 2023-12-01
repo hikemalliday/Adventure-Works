@@ -39,42 +39,42 @@ export default {
   >
     <div v-if="card.ProductCategoryID == 1">
       <img
-        src="../../assets/pics/bike.jpg"
+        src="../../../public/pics/bike.jpg"
         alt="card image"
         class="w-40 h-40 mr-2"
       />
     </div>
     <div v-if="card.ProductCategoryID == 2">
       <img
-        src="../../assets/pics/Components.jpg"
+        src="../../../public/pics/Components.jpg"
         alt="card image"
         class="w-40 h-40 mr-2"
       />
     </div>
     <div v-if="card.ProductCategoryID == 3">
       <img
-        src="../../assets/pics/Clothing.jpg"
+        src="../../../public/pics/Clothing.jpg"
         alt="card image"
         class="w-40 h-40 mr-2"
       />
     </div>
     <div v-if="card.ProductCategoryID == 4">
       <img
-        src="../../assets/pics/Accessories.jpg"
+        src="../../../public/pics/Accessories.jpg"
         alt="card image"
         class="w-40 h-40 mr-2"
       />
     </div>
     <div v-if="card.ProductCategoryID == 5">
       <img
-        src="../../assets/pics/Components.jpg"
+        src="../../../public/pics/Components.jpg"
         alt="card image"
         class="w-40 h-40 mr-2"
       />
     </div>
     <div v-if="card.name" class="flex">
       {{ card.name }}
-
+      <!-- <div v-if="edit === false"></div> -->
       <div v-if="edit === true">
         <input
           @keyup.enter="editItem(card)"

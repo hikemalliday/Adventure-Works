@@ -13,7 +13,7 @@ export default {
 </template>
 <style scoped>
 .landing-container {
-  background-image: url("../assets/pics/cyclist-background.jpg");
+  background-image: url("../public/pics/cyclist-background.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;

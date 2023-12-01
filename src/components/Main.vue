@@ -74,35 +74,35 @@ export default {
       >
         <div v-if="product.ProductCategoryID == 1">
           <img
-            src="../assets/pics/bike.JPG"
+            src="../../public/pics/bike.jpg"
             alt="card image"
             class="w-40 h-40 mr-2"
           />
         </div>
         <div v-if="product.ProductCategoryID == 2">
           <img
-            src="../assets/pics/Components.jpg"
+            src="../../public/pics/Components.jpg"
             alt="card image"
             class="w-40 h-40 mr-2"
           />
         </div>
         <div v-if="product.ProductCategoryID == 3">
           <img
-            src="../assets/pics/Clothing.jpg"
+            src="../../public/pics/Clothing.jpg"
             alt="card image"
             class="w-40 h-40 mr-2"
           />
         </div>
         <div v-if="product.ProductCategoryID == 4">
           <img
-            src="../assets/pics/Accessories.JPG"
+            src="../../public/pics/Accessories.jpg"
             alt="card image"
             class="w-40 h-40 mr-2"
           />
         </div>
         <div v-if="product.ProductCategoryID == 5">
           <img
-            src="../assets/pics/Components.jpg"
+            src="../../public/pics/Components.jpg"
             alt="card image"
             class="w-40 h-40 mr-2"
           />
