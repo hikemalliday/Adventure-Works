@@ -1,6 +1,9 @@
 # Adventure-Works
 ##### A mock e-commerce website created with VueJS and Vuex (a global store library)
 
+##### Docker Hub:
+https://hub.docker.com/repository/docker/hikemalliday/adventure-works-frontend/general
+
 The Adventure Works database is a mock database created by Microsoft, for learning purposes. It is normalized, and considered well architectured. 
 The website has login / signup using JWT's. Each user has their own shopping cart, which is stored in localStorage. 
 Query products by search string (input bar), or select categories.
