@@ -1,6 +1,9 @@
 # Adventure-Works
 ##### A mock e-commerce website created with VueJS and Vuex (a global store library)
 
+### Local Installation:
+I have added a 'docker-compose' folder, which contains a docker-compose.yaml. Run this YAML to pull both the backend and frontend images from Docker Hub and launch the website locally.
+
 ###### Docker Hub:
 https://hub.docker.com/repository/docker/hikemalliday/adventure-works-frontend/general
 
