@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# Adventure-Works
+##### A mock e-commerce website created with VueJS and Vuex (a global store library)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+###### Docker Hub:
+https://hub.docker.com/repository/docker/hikemalliday/adventure-works-frontend/general
 
-## Recommended IDE Setup
+The Adventure Works database is a mock database created by Microsoft, for learning purposes. It is normalized, and considered well architectured. 
+The website has login / signup using JWT's. Each user has their own shopping cart, which is stored in localStorage. 
+Query products by search string (input bar), or select categories.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+# Dev Notes
+
+This is the first Vue project I have done using a global store library (Vuex), as opposed to the traditional (or built-in) method of passing data from parent to child component, and vice-versa. I oringially had the Adventure Works database running locally on a MSSQL server, but in order to display the project on a website, I extracted the needed data from it, and created a lite version of the database using SQLite.
