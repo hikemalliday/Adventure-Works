@@ -5,7 +5,7 @@
 I have added a 'docker-compose' folder, which contains a docker-compose.yaml. Run this YAML to pull both the backend and frontend images from Docker Hub and launch the website locally.
 
 ###### Docker Hub:
-https://hub.docker.com/repository/docker/hikemalliday/adventure-works-frontend/general
+https://hub.docker.com/r/hikemalliday/adventure-works-frontend
 
 The Adventure Works database is a mock database created by Microsoft, for learning purposes. It is normalized, and considered well architectured. 
 The website has login / signup using JWT's. Each user has their own shopping cart, which is stored in localStorage. 
