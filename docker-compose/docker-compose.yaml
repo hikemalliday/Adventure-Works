@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: docker.io/hikemalliday/adventure-works-frontend:dockerhub
+    ports:
+      - "5174:3001" 
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    image: docker.io/hikemalliday/adventure-works-backend:dockerhub
+    ports:
+      - "8001:8000" 
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

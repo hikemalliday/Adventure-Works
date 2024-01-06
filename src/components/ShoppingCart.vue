@@ -1,8 +1,5 @@
 <script>
-// Check for login upon mounted()
-//    If (loggedIn) continue;
-//       else: redirect to login page.
-//          After login successful, return to cart
+
 export default {
     data() {
         return {
@@ -17,7 +14,6 @@ export default {
             if (this.loggedIn === true) return;
             else if (this.loggedIn === false)
             {
-                console.log('checkLoggedInStatus, ELSE (meaning this.loggedIN = false)');
                 this.$router.push('/login');
             }
         },
@@ -28,15 +24,15 @@ export default {
             this.$store.dispatch('decreaseQuantityAction', name);
                 },
         deleteShoppingCart(){
-            // Clear the shopping cart in VUEX, then clear is locally
+            
             this.$store.dispatch('deleteShoppingCartAction');
         },
         checkOut(){
-            console.log('func not made yet!!');
+            // Not made yet
         }
     },
     mounted(){
-        console.log('mounted test (shoppingcart)')
+        
         this.checkLoggedInStatus();
     }
 }
@@ -46,7 +42,7 @@ export default {
 <template>
     <div v-for="(product, index) in this.$store.state.shoppingCart.items" :key="product.name">
         <div>
-            <img @click = console.log(product) src="../../public/pics/bike.jpg" alt="card image" class="w-40 h-40 mr-2">
+            <img @click = console.log(product) src="../../public/pics/bike.JPG" alt="card image" class="w-40 h-40 mr-2">
         </div>
         <div class=" hover:text-sky-700 cursor-pointer active:text-sky-200">
             {{  product.name }}
@@ -78,13 +74,11 @@ export default {
     </div>
         <div v-if="this.$store.state.shoppingCart.total">
             TOTAL:
-            {{ this.$store.state.shoppingCart.total }}
+            {{ this.$store.state.shoppingCart.total }} $
         </div>
         <div @click="deleteShoppingCart" class="text-2xl hover:text-sky-700 cursor-pointer active:text-sky-200">
-            deleteShoppingCart()
+            Clear Shopping Cart
         </div>
-        <div @click="checkOut" class="text-2xl hover:text-sky-700 cursor-pointer active:text-sky-200">
-            checkOut()
-        </div>
+        
 
 </template>

@@ -2,6 +2,7 @@
 import Header from "./components/Header.vue";
 import Dropdown from "./components/Dropdown.vue";
 import { RouterView } from "vue-router";
+import serverUrl from './config.js'
 export default {
   data() {
     return {
@@ -12,7 +13,7 @@ export default {
   methods: {
     async testFetch() {
       try {
-        const result = await fetch("http://localhost:8000/testfetch", {
+        const result = await fetch(`${serverUrl}/testfetch`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -24,7 +25,7 @@ export default {
     },
     async isTokenValid(token) {
       try {
-        const response = await fetch("http://localhost:8000/istokenvalid", {
+        const response = await fetch(`${serverUrl}/istokenvalid`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

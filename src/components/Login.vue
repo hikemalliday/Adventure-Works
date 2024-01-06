@@ -1,4 +1,5 @@
 <script>
+import serverUrl from '../config.js'
 export default {
   names: "Login",
   data() {
@@ -21,7 +22,7 @@ export default {
       };
       try {
         const result = await fetch(
-          "http://localhost:8000/createusernameandpassword",
+          `${serverUrl}/createusernameandpassword`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -46,7 +47,7 @@ export default {
 
     async isTokenValid(token) {
       try {
-        const response = await fetch("http://localhost:8000/istokenvalid", {
+        const response = await fetch(`${serverUrl}/istokenvalid`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -75,7 +76,7 @@ export default {
         body = { username: username, password: password };
       }
       try {
-        const result = await fetch("http://localhost:8000/login", {
+        const result = await fetch(`${serverUrl}/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(body),

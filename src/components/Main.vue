@@ -74,7 +74,7 @@ export default {
       >
         <div v-if="product.ProductCategoryID == 1">
           <img
-            src="../../public/pics/bike.jpg"
+            src="../../public/pics/bike.JPG"
             alt="card image"
             class="w-40 h-40 mr-2"
           />
@@ -95,7 +95,7 @@ export default {
         </div>
         <div v-if="product.ProductCategoryID == 4">
           <img
-            src="../../public/pics/Accessories.jpg"
+            src="../../public/pics/Accessories.JPG"
             alt="card image"
             class="w-40 h-40 mr-2"
           />

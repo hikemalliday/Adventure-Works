@@ -3,6 +3,7 @@ import { createStore } from "vuex";
 import "./style.css";
 import App from "./App.vue";
 import router from "./router/index.js";
+import serverUrl from "./config.js";
 
 router.beforeEach(async (to, from, next) => {
   const token = localStorage.getItem("jwtToken");
@@ -25,7 +26,7 @@ router.beforeEach(async (to, from, next) => {
 
 async function isValidToken(token) {
   try {
-    const response = await fetch("http://localhost:8000/istokenvalid", {
+    const response = await fetch(`${serverUrl}/istokenvalid`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -178,7 +179,7 @@ const store = createStore({
       console.log(card);
 
       try {
-        const result = await fetch("http://127.0.0.1:8000/editItem", {
+        const result = await fetch(`${serverUrl}/editItem`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(card),
@@ -206,7 +207,7 @@ const store = createStore({
     },
     async initialFetch({ commit }) {
       try {
-        const result = await fetch("http://127.0.0.1:8000/initialFetch", {
+        const result = await fetch(`${serverUrl}/initialFetch`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
