@@ -1,9 +1,0 @@
-version: "3.8"
-services:
-  frontend:
-    build: ./
-    container_name: adventure-works
-    ports:
-      - "5174:3001"
-    stdin_open: true
-    tty: true

@@ -2,7 +2,12 @@
 import Header from "./components/Header.vue";
 import Dropdown from "./components/Dropdown.vue";
 import { RouterView } from "vue-router";
-import serverUrl from './config.js'
+if (import.meta.env) {
+  let apiUrl = import.meta.env.VITE_APP_SERVER_URL;
+  if (import.meta.env.VITE_APP_HOST_NAME == "LOCAL")
+    apiUrl = import.meta.env.VITE_APP_LOCAL_URL;
+}
+
 export default {
   data() {
     return {
@@ -13,7 +18,7 @@ export default {
   methods: {
     async testFetch() {
       try {
-        const result = await fetch(`${serverUrl}/testfetch`, {
+        const result = await fetch(`${apiUrl}/testfetch`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
         });
@@ -25,7 +30,7 @@ export default {
     },
     async isTokenValid(token) {
       try {
-        const response = await fetch(`${serverUrl}/istokenvalid`, {
+        const response = await fetch(`${apiUrl}/istokenvalid`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

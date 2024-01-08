@@ -1,5 +1,7 @@
 <script>
-import serverUrl from '../config.js'
+let apiUrl = import.meta.env.VITE_APP_SERVER_URL;
+if (import.meta.env.VITE_APP_HOST_NAME == "LOCAL")
+  apiUrl = import.meta.env.VITE_APP_LOCAL_URL;
 export default {
   names: "Login",
   data() {
@@ -21,14 +23,11 @@ export default {
         admin: this.admin,
       };
       try {
-        const result = await fetch(
-          `${serverUrl}/createusernameandpassword`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(body),
-          }
-        );
+        const result = await fetch(`${apiUrl}/createusernameandpassword`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(body),
+        });
         let returnedUsernameAndPassword = await result.json();
         console.log(returnedUsernameAndPassword);
 
@@ -47,7 +46,7 @@ export default {
 
     async isTokenValid(token) {
       try {
-        const response = await fetch(`${serverUrl}/istokenvalid`, {
+        const response = await fetch(`${apiUrl}/istokenvalid`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -69,14 +68,14 @@ export default {
     async login(username = null, password = null) {
       let token = "";
       let body = null;
-
+      console.log("apiUrl, login():", apiUrl);
       if (!username || !password) {
         body = { username: this.username, password: this.password };
       } else if (username && password) {
         body = { username: username, password: password };
       }
       try {
-        const result = await fetch(`${serverUrl}/login`, {
+        const result = await fetch(`${apiUrl}/login`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(body),
